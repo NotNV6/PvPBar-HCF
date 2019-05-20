@@ -1,5 +1,5 @@
 # PvPBar-HCF
-HCF core made by NV6, do not redistribute or use without permissions. Ignoring this will result in a penalty leading up to $1000.
+HCF core made by NV6, do not redistribute or use without permissions. Ignoring this will result to a penalty leading up to $1000.
 
 # TODO
 * More classes
