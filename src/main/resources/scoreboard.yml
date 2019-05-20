@@ -1,0 +1,24 @@
+# POSSIBLE PLACEHOLDERS:
+# KitMap:
+# - %kills% - Displays the player's kills
+# - %deaths% - Displays the player's deaths
+# - %balance% - Displays the player's balance
+# - %balance_safezone% - Displays the player's balance (Only when in a safezone, this line gets deleted when not in a safezone)
+#
+# HINT FOR PEOPLE WHICH USE A SERVER HOSTED ON WINDOWS:
+# You can use \xbb for »'s, and %straight_line% for straight lines on the scoreboard.
+SCOREBOARD:
+  TITLE: "&6&lMineHQ &7&l%straight_line% &fKitMap"
+  HEADER:
+    - "&7&m-------------------------"
+  FOOTER:
+    - "&7&m-------------------------"
+  KITMAP:
+    - "&dKills: &e%kills%"
+    - "&dDeaths: &e%deaths%"
+    - "&dKillstreak: &e%killstreak%"
+  VALUES: "&c"
+  TIMERS:
+    HOME: "&9Home"
+    ENDERPEARL: "&e&lEnderpearl"
+    COMBAT: "&c&lSpawn Tag"

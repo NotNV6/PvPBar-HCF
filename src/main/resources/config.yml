@@ -1,0 +1,69 @@
+DATABASE:
+  AUTH:
+    ENABLED: TRUE
+    PASSWORD: "password"
+    USER: "user"
+    DATABASE: "HCF"
+    HOST: "127.0.0.1"
+    PORT: 25565
+FACTION_GENERAL:
+  KITMAP: TRUE
+  STARTING_BALANCE: 250
+  BYPASS_INSIDE_CHECK:
+    - "North Road"
+    - "South Road"
+    - "West Road"
+    - "East Road"
+  STARTING_DTR: 1.1
+  DTR_PER_PLAYER: 0.5
+  MIN_DTR: -6.0
+  REGEN_DELAY: 90 #every 90 seconds regen 0.1 dtr
+  FREEZE_DURATION: 3600
+  ALLIES:
+    ENABLED: TRUE
+    DAMAGE_ALLIES: TRUE
+    MAX_ALLIES: 1
+  MAX_PLAYERS: 30
+FACTION_NAME:
+  MAX_CHARACTERS: 16
+  MIN_CHARACTERS: 3
+  BLOCKED_NAMES:
+    - "hcteams"
+TAB_LIST:
+  ENABLED: TRUE
+  FRIENDLY_COLOR: "DARK_GREEN"
+  ALLY_COLOR: "LIGHT_PURPLE"
+  ENEMY_COLOR: "YELLOW"
+FACTION_MAP:
+  PILLAR:
+    FRIENDLY: "DIAMOND_BLOCK"
+    ENEMY: "RANDOM"
+    ALLY: "RANDOM"
+    SYSTEM_FACTION:
+      DEATHBAN: "RANDOM"
+      NON-DEATHBAN: "DIAMOND_BLOCK"
+FACTION_CLAIMING:
+  BUFFER: 2
+  PRICE_MULTIPLIER: 1.8 #5 x 5 claim = $45
+  MIN_SIZE: 5 #minimum size = 5x5
+  CLAIM_PILLAR:
+    TYPE: "EMERALD_BLOCK"
+    DATA: 0
+  WAND:
+    TYPE: "GOLD_HOE"
+    DATA: 0
+    NAME: "&aClaiming Wand"
+    LORE:
+      - "&aLeft click the ground&7 to set the &afirst&7 point."
+      - "&aRight click the ground&7 to set the &asecond&7 point."
+      - "&aSneak and left click the air&7 to claim once both points set."
+      - "&aRight click the air twice&7 to clear your selection."
+FACTION_CHAT:
+  ENABLED: TRUE
+  NO_FACTION: "&6[&c*&6]&r "
+  FRIENDLY: "&6[&2%TAG%&6]&r "
+  ALLY: "&6[&d%TAG%&6]&r "
+  ENEMY: "&6[&e%TAG%&6]&r "
+OVERWORLD: "world"
+END: "world_the_end"
+NETHER: "world_the_nether"
