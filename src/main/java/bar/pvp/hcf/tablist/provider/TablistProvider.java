@@ -55,7 +55,7 @@ public class TablistProvider implements TablistEntrySupplier {
             tab.put(0, 14, CC.WHITE + "(" + player.getLocation().getBlockX() + ", " + player.getLocation().getBlockZ() + ") " + CC.GRAY + "[" + getDirection(player) + ']');
         }
 
-        tab.put(1, 0, CC.DARK_AQUA + CC.BOLD.toString() + "CuraHQ");
+        tab.put(1, 0, CC.DARK_AQUA + CC.BOLD.toString() + "PvPBar");
 
         if(profile.getFaction() != null) {
             PlayerTeam team = profile.getFaction();
