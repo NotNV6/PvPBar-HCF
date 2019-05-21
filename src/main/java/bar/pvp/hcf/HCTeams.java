@@ -60,7 +60,7 @@ public class HCTeams extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        MinecraftServer.getServer().setMotd(CC.translate("&3&lCuraHQ &7&l｜ &fEU Proxy\n" + "&fDevelopment Server &7(More information soon)"));
+        MinecraftServer.getServer().setMotd(CC.translate("&3&lPvPBar &7&l｜ &fEU Proxy\n" + "&fDevelopment Server &7(More information soon)"));
 
         instance = this;
 
@@ -129,7 +129,6 @@ public class HCTeams extends JavaPlugin {
         new TeamUnclaimCommand();
         new TeamListCommand();
         new TeamHomeCommand();
-        new TeamStuckCommand();
 
         new TeamFreezeCommand();
         new TeamThawCommand();

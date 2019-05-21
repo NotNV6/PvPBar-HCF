@@ -272,7 +272,8 @@ ERROR:
 CLASSES:
   BARD:
     ENERGY: "&aYou now have &e%ENERGY% energy &afor &e&lBard&a."
-    EQUIP: ""
+    EQUIP: "&bClass&7: &b&lBard &7-> &aEquiped"
+    UNEQUIP: "&bClass&7: &b&lBard &7-> &aUnequiped"
 TIMERS:
   HOME:
     CANCELLED_MOVE: "&cYour home timer has been cancelled because you moved."

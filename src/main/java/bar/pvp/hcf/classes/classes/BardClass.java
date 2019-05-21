@@ -22,9 +22,9 @@ public class BardClass extends PvpClass implements Listener {
     private static Map<Player, Float> bardEnergy = new HashMap<>();
 
     private PotionEffect[] potionEffects = new PotionEffect[] {
-            new PotionEffect(PotionEffectType.SPEED, 20000, 1),
-            new PotionEffect(PotionEffectType.REGENERATION, 20000, 0),
-            new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 20000, 1),
+            new PotionEffect(PotionEffectType.SPEED, 2000000, 1),
+            new PotionEffect(PotionEffectType.REGENERATION, 2000000, 0),
+            new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 2000000, 1),
     };
 
     public BardClass() {
@@ -38,10 +38,21 @@ public class BardClass extends PvpClass implements Listener {
 
     @Override
     public void onEquip(Player player) {
-        super.onEquip(player);
+        player.getActivePotionEffects().clear();
+
         Arrays.stream(potionEffects).forEach(player::addPotionEffect);
         player.sendMessage(getConfig().getString("CLASSES.BARD.EQUIP"));
         Profile.getProfile(player).setPvpClass(this);
+    }
+
+    @Override
+    public void onUnequip(Player player) {
+        player.getActivePotionEffects().clear();
+
+        player.sendMessage(getConfig().getString("CLASSES.BARD.UNEQUIP"));
+        Profile.getProfile(player).setPvpClass(null);
+
+        bardEnergy.remove(player);
     }
 
     public void onTick(Player player) {
@@ -52,7 +63,7 @@ public class BardClass extends PvpClass implements Listener {
             bardEnergy.put(player, bardEnergy.get(player) + 100F);
 
         float energy = bardEnergy.get(player);
-        if(energy == 10000 || energy == 20000 || energy == 30000 || energy == 40000 || energy == 50000 || energy == 60000 || energy == 70000 || energy == 80000 || energy == 90000 || energy == 120000)
+        if(energy == 10000 || energy == 20000 || energy == 30000 || energy == 40000 || energy == 50000 || energy == 60000 || energy == 70000 || energy == 80000 || energy == 90000 || energy == 119900)
             player.sendMessage(getConfig().getString("CLASSES.BARD.ENERGY").replace("%ENERGY%", TimeUtil.getRemainingTime(energy, true)));
     }
 }

@@ -1,6 +1,5 @@
 package bar.pvp.hcf.profiles;
 
-import bar.pvp.hcf.profiles.teleport.ProfileTeleportTask;
 import bar.pvp.hcf.utils.CC;
 import bar.pvp.hcf.HCTeams;
 import bar.pvp.hcf.classes.PvpClass;
@@ -41,7 +40,7 @@ public class Profile {
     private UUID uuid;
     private ClaimProfile claimProfile;
     private Claim lastInside;
-    private ProfileTeleportTask teleportWarmup;
+
     // Lists and Sets
     private Set<ClaimPillar> mapPillars;
     private List<PlayerTimer> playerTimers;

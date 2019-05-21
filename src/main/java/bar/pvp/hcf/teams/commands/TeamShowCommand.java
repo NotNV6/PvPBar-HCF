@@ -168,7 +168,7 @@ public class TeamShowCommand extends TeamCommand {
                         continue;
                     }
 
-                    ChatColor allyColor = ChatColor.valueOf(mainConfig.getString("TAB_LIST.ALLY_COLOR"));
+                    CC allyColor = CC.PINK;
                     String allies = "";
                     for (PlayerTeam ally : playerFaction.getAllies()) {
                         allies = allies + allyColor + ally.getName();

@@ -155,9 +155,9 @@ FACTION_CLAIM:
   RECEIVED_WAND: "&7You have received a claiming wand."
   CLICK_TO_RESET_SELECTION: "&7Right-click the air again to reset your selection!"
   SELECTION_RESET: "&7Your claim selection has been reset!"
-  SET_POSITION_1: "&eYou have set the &9first&e point to &7(X: %X_POS%, Z: %Z_POS%)&e."
-  SET_POSITION_2: "&eYou have set the &9second&e point to &7(X: %X_POS%, Z: %Z_POS%)&e."
-  BOTH_POSITIONS_SET: "&eClaim cost: &9$%COST%&e, Current size: &7(%WIDTH%, %LENGTH%)&e, &9%TOTAL_BLOCKS%&e blocks."
+  SET_POSITION_1: "&eYou have set the &afirst&e point to &7(X: %X_POS%, Z: %Z_POS%)&e."
+  SET_POSITION_2: "&eYou have set the &asecond&e point to &7(X: %X_POS%, Z: %Z_POS%)&e."
+  BOTH_POSITIONS_SET: "&eClaim cost: &a$%COST%&e, Current size: &7(%WIDTH%, %LENGTH%)&e, &a%TOTAL_BLOCKS%&e blocks."
   ENTER:
     WILDERNESS: "&eNow entering: &7Wilderness &e(&cDeathban&e)"
     FRIENDLY: "&eNow entering: &a%FACTION% &e(&cDeathban&e)"
@@ -272,7 +272,8 @@ ERROR:
 CLASSES:
   BARD:
     ENERGY: "&aYou now have &e%ENERGY% energy &afor &e&lBard&a."
-    EQUIP: ""
+    EQUIP: "&bClass&7: &b&lBard &7-> &aEquiped"
+    UNEQUIP: "&bClass&7: &b&lBard &7-> &aUnequiped"
 TIMERS:
   HOME:
     CANCELLED_MOVE: "&cYour home timer has been cancelled because you moved."

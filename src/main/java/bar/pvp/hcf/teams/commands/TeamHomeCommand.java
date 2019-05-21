@@ -21,9 +21,7 @@ public class TeamHomeCommand extends TeamCommand {
 
         Profile profile = Profile.getByUuid(player.getUniqueId());
 
-        if (profile.getTeleportWarmup() != null) {
-            return;
-        }
+        if(profile.getPlayerTimers().contains(TimerManager.getEnderpearlTimer())) return;
 
         Team team;
         if (command.getArgs().length >= 1 && player.hasPermission("hcteams.admin")) {
@@ -49,8 +47,6 @@ public class TeamHomeCommand extends TeamCommand {
             player.sendMessage(langConfig.getString("ERROR.HOME_NOT_SET"));
             return;
         }
-
-        Location location = LocationSerialization.deserializeLocation(team.getHome());
 
         Claim claim = Claim.getProminentClaimAt(player.getLocation());
         if (claim != null && claim.getTeam() instanceof SystemTeam && !((SystemTeam) claim.getTeam()).isDeathban()) {
