@@ -24,7 +24,8 @@ public class QueryProvider implements LayoutProvider {
         Profile profile = Profile.getProfile(player);
 
         config.getStringList("SCOREBOARD.HEADER").forEach(layout::add);
-        if(HCTeams.getInstance().isKitMap()) config.getStringList("SCOREBOARD.KITMAP").forEach(string -> layout.add(string.replace("%kills%", player.getStatistic(Statistic.PLAYER_KILLS) + "").replace("%deaths%", player.getStatistic(Statistic.DEATHS) + "").replace("%balance%", profile.getEconomy() + "").replace("%killstreak%", "" + profile.getKillStreak())));
+        if(HCTeams.getInstance().isKitMap()) 
+            config.getStringList("SCOREBOARD.KITMAP").forEach(string -> layout.add(string.replace("%kills%", player.getStatistic(Statistic.PLAYER_KILLS) + "").replace("%deaths%", player.getStatistic(Statistic.DEATHS) + "").replace("%balance%", profile.getEconomy() + "").replace("%killstreak%", "" + profile.getKillStreak())));
         
         profile.getPlayerTimers().forEach(timer -> layout.add(timer.getDisplayName() + "&7: " + config.getString("SCOREBOARD.VALUES") + TimeUtil.getRemainingTime(timer.getCooldowns().get(player), timer.isTrailing()) + 's'));
 
