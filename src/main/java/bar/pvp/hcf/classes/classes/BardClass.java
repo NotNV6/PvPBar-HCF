@@ -38,7 +38,7 @@ public class BardClass extends PvpClass implements Listener {
 
     @Override
     public void onEquip(Player player) {
-        player.getActivePotionEffects().clear();
+        player.getActivePotionEffects().forEach(potion -> player.removePotionEffect(potion.getType());
 
         Arrays.stream(potionEffects).forEach(player::addPotionEffect);
         player.sendMessage(getConfig().getString("CLASSES.BARD.EQUIP"));
