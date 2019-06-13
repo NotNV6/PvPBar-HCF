@@ -47,8 +47,7 @@ public class BardClass extends PvpClass implements Listener {
 
     @Override
     public void onUnequip(Player player) {
-        player.getActivePotionEffects().clear();
-
+        player.getActivePotionEffects().forEach(potion -> player.removePotionEffect(potion.getType());
         player.sendMessage(getConfig().getString("CLASSES.BARD.UNEQUIP"));
         Profile.getProfile(player).setPvpClass(null);
 
